@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution(object):
 
-    def buildTreeFromInorderAndPreorder(self, inorder, preorder, dictionary, ins, ine, prs, pre):
+    def build_tree_from_inorder_and_preorder(self, inorder, preorder, dictionary, ins, ine, prs, pre):
         if ins > ine:
             return None
         root_val = preorder[prs]
@@ -16,11 +16,11 @@ class Solution(object):
         num_nodes_in_left_subtree = root_index - ins
         num_nodes_in_right_subtree = ine - root_index
 
-        root.left = self.buildTreeFromInorderAndPreorder(inorder, preorder, dictionary
-                                                         , ins, root_index-1, prs+1, prs+num_nodes_in_left_subtree)
+        root.left = self.build_tree_from_inorder_and_preorder(inorder, preorder, dictionary
+                                                              , ins, root_index-1, prs+1, prs+num_nodes_in_left_subtree)
 
-        root.right = self.buildTreeFromInorderAndPreorder(inorder, preorder, dictionary
-                                                          , root_index+1, ine, pre-num_nodes_in_right_subtree+1, pre)
+        root.right = self.build_tree_from_inorder_and_preorder(inorder, preorder, dictionary
+                                                               , root_index+1, ine, pre-num_nodes_in_right_subtree+1, pre)
         return root
 
     def buildTree(self, preorder, inorder):
@@ -38,5 +38,5 @@ class Solution(object):
         for i in range(n):
             dictionary[inorder[i]] = i
 
-        root = self.buildTreeFromInorderAndPreorder(inorder, preorder, dictionary, 0, n-1, 0, n-1)
+        root = self.build_tree_from_inorder_and_preorder(inorder, preorder, dictionary, 0, n-1, 0, n-1)
         return root
