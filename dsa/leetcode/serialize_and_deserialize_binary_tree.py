@@ -5,8 +5,6 @@
 #         self.left = None
 #         self.right = None
 
-from collections import deque
-
 class Codec:
 
     def serialize(self, root):
@@ -39,7 +37,6 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """
-
         if len(data) == 2:
             return None
         data_list = list(data[1:-1].split(','))
