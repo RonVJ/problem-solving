@@ -1,3 +1,14 @@
+##############################################################################
+# Author: Amit Jaiswal
+# LinkedIn: https://www.linkedin.com/in/RonVJ/
+# GitHub: https://github.com/RonVJ
+# LeetCode: https://leetcode.com/ronvj/
+
+# Problem title: 15. 3Sum
+# Problem link: https://leetcode.com/problems/3sum/
+# Please reach out to me over LinkedIn if you want to discuss regarding solution
+##############################################################################
+
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         n = len(nums)
