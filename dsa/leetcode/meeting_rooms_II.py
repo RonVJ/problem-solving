@@ -16,7 +16,6 @@ class Solution:
             times.append((interval[0], True))
             times.append((interval[1], False))
         times.sort(key=lambda x: (x[0], x[1]))
-        print (times)
 
         count = 0
         max_count = 0
